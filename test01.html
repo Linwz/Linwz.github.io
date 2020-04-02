@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>捕鲲达人</title>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="main"  >
+				<div id="stage" style="margin: 0 auto; width: 800px; height: 480px;  text-align: center; vertical-align: middle" >
+
+					<canvas id="canvas"  width="800" height="480">
+						不支持画板对象时能看到
+					</canvas>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext('2d');
+
+			var bg = new Image();
+			bg.src = "images/shop.png";
+			
+			window.onload = function(){
+            	ctx.drawImage(bg,0,0);
+            }
+			canvas.onclick = function(e){
+				var mpoint = getPointOnCanvas(e.x, e.y)
+				if(mpoint.x > 88 && mpoint.x < 187 && mpoint.y > 95 &&mpont.y < 185){
+					alert("购买成功");
+				}
+			}
+
+		</script>
+	</body>
+</html>
+
