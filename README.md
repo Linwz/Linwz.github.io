@@ -1,2 +1,0 @@
-# Linwz.github.io
-test
